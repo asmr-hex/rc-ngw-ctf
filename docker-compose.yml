@@ -1,0 +1,9 @@
+# spin up fancy webapp
+
+version: '2'
+services:
+  app:
+    build: .
+    ports:
+      - 44203:5000
+    restart: always
