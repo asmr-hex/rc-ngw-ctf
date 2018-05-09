@@ -1,0 +1,5 @@
+FROM nouchka/sqlite3:latest
+
+COPY ./data.sql /root/db/
+
+RUN 
