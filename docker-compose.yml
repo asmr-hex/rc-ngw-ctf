@@ -7,11 +7,3 @@ services:
     ports:
       - 44203:5000
     restart: always
-    depends_on:
-      - sqlite3
-  sqlite3:
-    image: nouchka/sqlite3:latest
-    stdin_open: true
-    tty: true
-    volumes:
-      - ./db/:/root/db/

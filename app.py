@@ -1,10 +1,8 @@
 from flask import Flask, render_template, request
-from flask_sqlalchemy import SQLAlchemy
+import sqlite3 as sql
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite3:///users.sqlite3'
-db = SQLAlchemy(app)
 
 
 @app.route('/')
@@ -19,11 +17,19 @@ def login():
         username = request.form['username']
         password = request.form['password']
 
-        # authenticate the user and stuff...
         print(username)
         print(password)
 
-        return ''
+        # authenticate the user and stuff...
+        # conn = sql.connect('cops.db')
+        # cursor = conn.cursor()
+        # cursor.execute('SELECT * FROM users WHERE username="robocop"')
+
+        # all_rows = cursor.fetchall()
+
+        # print(all_rows)
+
+        return 'hiiii'
     elif request.method == 'GET':
         return render_template(
             'login.html')

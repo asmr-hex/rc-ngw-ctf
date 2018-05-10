@@ -2,4 +2,6 @@ FROM nouchka/sqlite3:latest
 
 COPY ./data.sql /root/db/
 
-RUN 
+RUN sqlite3 cops.db < data.sql && rm data.sql
+
+
