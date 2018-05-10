@@ -21,15 +21,16 @@ def login():
         print(password)
 
         # authenticate the user and stuff...
-        # conn = sql.connect('cops.db')
-        # cursor = conn.cursor()
-        # cursor.execute('SELECT * FROM users WHERE username="robocop"')
+        conn = sql.connect('cops.db')
+        cursor = conn.cursor()
+        cursor.execute('SELECT * FROM users WHERE username="{username}"'.
+                       format(username=username))
 
-        # all_rows = cursor.fetchall()
+        all_rows = cursor.fetchall()
 
-        # print(all_rows)
+        print(all_rows)
 
-        return 'hiiii'
+        return 'okok'
     elif request.method == 'GET':
         return render_template(
             'login.html')
