@@ -1,0 +1,21 @@
+<!doctype html>
+<title>LOLPD</title>
+<body style="background-color:#ffd7d1; color:#212f66; text-align:center;">
+  <h3>if you forgot your password, enter your username and we will email you your password</h3>
+  <br>
+  <img style="width:80px;"src="../static/question.jpeg">
+  <img style="width:80px;"src="../static/question.jpeg">
+  <img style="width:80px;"src="../static/question.jpeg">
+  <br>
+  <br>
+  {% if error %}
+  <div style="font-weight: bold; color:red;">{{ error }}</div>
+  {% endif %}
+  {% if success %}
+  <div style="font-weight: bold; color:green;">{{ success }}</div>
+  {% endif %}
+  <form action="{{ url_for('password_reset') }}" method="post">
+    <input type="text" name="username" placeholder="username"><br>
+    <input type="submit" value="email password">
+  </form>
+</body>

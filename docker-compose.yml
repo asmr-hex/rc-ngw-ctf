@@ -4,7 +4,8 @@ version: '2'
 services:
   app:
     build: .
-    ports:
-      - 44203:5000
+    # ports:
+    #   - 44203:5000
     restart: always
     tty: true
+    network_mode: "host"

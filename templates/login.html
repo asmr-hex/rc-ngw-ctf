@@ -1,9 +1,21 @@
 <!doctype html>
-<title>Jellyfish Inc.</title>
-<body>
-  <form action="{{ url_for('login') }}" method="post">
-    <input type="text" name="username" placeholder="username">
-    <input type="text" name="password" placeholder="password">
-    <input type="submit">
-  </form>
+<title>LOLPD</title>
+<body style="background-color:#ffd7d1; color:#212f66">
+  <div style="text-align:center;">
+    <h1>Login for Official business only!!!!!</h1>
+    <br>
+    <img style="width:200px;"src="../static/sanduche.jpg">
+    <br>
+    <br>
+    {% if error %}
+    <div style="font-weight: bold; color:red;">{{ error }}</div>
+    {% endif %}
+    <form action="{{ url_for('login') }}" method="post">
+      <input type="text" name="username" placeholder="username"><br>
+      <input type="text" name="password" placeholder="password"><br>
+      <input type="submit" value="login">
+    </form>
+    <br>
+    <a href="/forgot">forgot password?</a>
+  </div>
 </body>
