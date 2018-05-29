@@ -3,8 +3,8 @@ import sqlite3 as sql
 import requests
 
 
-key = 'key-61bcaa9e01ecd55dc9826333f9ea7276'
-base_email_url = 'graveyard.rip'
+key = 'place-your-mailgun-api-key-here!'  # CHANGE THIS
+base_email_url = 'place-your-email-domain-here!'  # CHANGE THIS
 
 
 app = Flask(__name__)
